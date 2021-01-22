@@ -21,38 +21,12 @@ const reducer = (state, action) => {
 };
 
 const SquareScreen = () => {
-  const [{ red, green, blue }, dispatch] = useReducer(reducer, {
+  const [state, dispatch] = useReducer(reducer, {
     red: 0,
     green: 0,
     blue: 0,
   });
-
-  // /**
-  //  * @function setColor
-  //  * @param {*} color
-  //  * @param {*} change
-  //  */
-
-  // const setColor = (color, change) => {
-  //   // color === "red", "green", "blue"
-  //   switch (color) {
-  //     case "red":
-  //       red + change > 255 || red + change < 0 ? null : setRed(red + change);
-  //       return;
-  //     case "green":
-  //       green + change > 255 || green + change < 0
-  //         ? null
-  //         : setGreen(green + change);
-  //       return;
-  //     case "blue":
-  //       blue + change > 255 || blue + change < 0
-  //         ? null
-  //         : setBlue(blue + change);
-  //       return;
-  //     default:
-  //       return;
-  //   }
-  // };
+  const { red, green, blue } = state;
 
   return (
     <View>
